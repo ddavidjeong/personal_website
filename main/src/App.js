@@ -1,29 +1,56 @@
-import logo from "./logo.svg";
+import React from "react";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
+  useLocation,
 } from "react-router-dom";
 import "./App.css";
-import Home, { Dang } from "./components/Home/home";
+import Home from "./components/Home/home";
 import Projects from "./components/Projects/projects";
 import Blogs from "./components/Blogs/blogs";
-import About from "./components/About_Me/about";
+import Profile from "./components/Profile/profile";
 import Navbar from "./components/Navbar/navbar";
+import LandingPage from "./components/LandingPage";
+import Resume from "./components/Resume/resume";
 
 function App() {
   return (
     <Router>
-      <Navbar />
-      <div className="container mt-3">
+      <AppContent />
+    </Router>
+  );
+}
+
+function AppContent() {
+  const location = useLocation();
+
+  // List of paths that do not include the navbar
+  const noNavPaths = ["/"];
+
+  return (
+    <div>
+      {/* Conditionally render Navbar */}
+      {!noNavPaths.includes(location.pathname) && (
+        <Navbar />
+      )}
+      <div
+        className={
+          noNavPaths.includes(location.pathname)
+            ? ""
+            : "container mt-3"
+        }
+      >
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/resume" element={<Resume />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/blogs" element={<Blogs />} />
         </Routes>
       </div>
-    </Router>
+    </div>
   );
 }
 

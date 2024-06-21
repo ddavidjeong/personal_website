@@ -24,15 +24,10 @@ function Navbar() {
           className="collapse navbar-collapse"
           id="navbarNav"
         >
-          <ul className="nav nav-tabs">
+          <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link" to="/">
+              <Link className="nav-link" to="/home">
                 Home
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/about">
-                About
               </Link>
             </li>
             <li className="nav-item">
@@ -41,8 +36,18 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact">
-                Contact
+              <Link className="nav-link" to="/resume">
+                Resume
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/profile">
+                Profile
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/blogs">
+                Blogs
               </Link>
             </li>
           </ul>
