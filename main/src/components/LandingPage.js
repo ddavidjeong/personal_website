@@ -53,7 +53,7 @@ function LandingPage() {
             to="/blogs"
             className="hover:text-blue-500 transition-colors duration-300"
           >
-            Blogs
+            Blogs!
           </Link>
         </h2>
       </div>
