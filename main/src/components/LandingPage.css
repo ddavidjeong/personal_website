@@ -5,6 +5,15 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.links {
+  color: black;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.links:hover {
+  color: lightgray;
+}
 .box1 {
   grid-column-start: 1;
   grid-column-end: 4;

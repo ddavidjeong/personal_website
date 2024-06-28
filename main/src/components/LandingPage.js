@@ -19,25 +19,33 @@ function LandingPage() {
       <div className="pages">
         <div class="box3">
           <div>
-            <Link to="/resume">Resume</Link>
+            <Link to="/resume" className="links">
+              RESUME
+            </Link>
           </div>
         </div>
 
         <div className="box4">
           <div>
-            <Link to="/projects">Projects</Link>
+            <Link to="/projects" className="links">
+              PROJECTS
+            </Link>
           </div>
         </div>
 
         <div className="box5">
           <div>
-            <Link to="/profile">Profile</Link>
+            <Link to="/profile" className="links">
+              PROFILE
+            </Link>
           </div>
         </div>
 
         <div className="box6">
           <div>
-            <Link to="/blogs">Blogs</Link>
+            <Link to="/blogs" className="links">
+              BLOGS
+            </Link>
           </div>
         </div>
       </div>
