@@ -4,6 +4,7 @@
   width: 30%;
   padding-top: 20%;
 }
+
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 15em);
@@ -36,7 +37,7 @@
 
 .box1,
 .box2 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 900;
 }
 
