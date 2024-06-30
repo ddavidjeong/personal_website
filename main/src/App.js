@@ -5,6 +5,10 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
+import {
+  TransitionGroup,
+  CSSTransition,
+} from "react-transition-group";
 import "./App.css";
 import Home from "./components/Home/home";
 import Projects from "./components/Projects/projects";
@@ -41,14 +45,29 @@ function AppContent() {
             : "container mt-3"
         }
       >
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/blogs" element={<Blogs />} />
-        </Routes>
+        <TransitionGroup>
+          <CSSTransition
+            key={location.key}
+            timeout={300}
+            classNames="page"
+            unmountOnExit
+          >
+            <Routes location={location}>
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/resume" element={<Resume />} />
+              <Route
+                path="/projects"
+                element={<Projects />}
+              />
+              <Route
+                path="/profile"
+                element={<Profile />}
+              />
+              <Route path="/blogs" element={<Blogs />} />
+            </Routes>
+          </CSSTransition>
+        </TransitionGroup>
       </div>
     </div>
   );
