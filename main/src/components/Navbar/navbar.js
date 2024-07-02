@@ -1,57 +1,64 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
-          My Website
+    <nav className="bg-black text-white px-4 py-2 flex justify-between items-center">
+      <Link
+        className="text-xl font-semibold"
+        to="/"
+        style={{
+          fontFamily: "Helvetica, Arial, sans-serif",
+        }}
+      >
+        Hub
+      </Link>
+      <div className="flex gap-4">
+        <Link
+          className="hover:text-gray-300"
+          to="/home"
+          style={{
+            fontFamily: "Helvetica, Arial, sans-serif",
+          }}
+        >
+          Home
         </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+        <Link
+          className="hover:text-gray-300"
+          to="/projects"
+          style={{
+            fontFamily: "Helvetica, Arial, sans-serif",
+          }}
         >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div
-          className="collapse navbar-collapse"
-          id="navbarNav"
+          Projects
+        </Link>
+        <Link
+          className="hover:text-gray-300"
+          to="/resume"
+          style={{
+            fontFamily: "Helvetica, Arial, sans-serif",
+          }}
         >
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link className="nav-link" to="/home">
-                Home
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/projects">
-                Projects
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/resume">
-                Resume
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/profile">
-                Profile
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/blogs">
-                Blogs
-              </Link>
-            </li>
-          </ul>
-        </div>
+          Resume
+        </Link>
+        <Link
+          className="hover:text-gray-300"
+          to="/profile"
+          style={{
+            fontFamily: "Helvetica, Arial, sans-serif",
+          }}
+        >
+          Profile
+        </Link>
+        <Link
+          className="hover:text-gray-300"
+          to="/blogs"
+          style={{
+            fontFamily: "Helvetica, Arial, sans-serif",
+          }}
+        >
+          Blogs
+        </Link>
       </div>
     </nav>
   );
