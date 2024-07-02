@@ -1,10 +1,9 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 function Home() {
   return (
-    <div className="container mt-4">
-      <div className="jumbotron">
+    <div className="container">
+      <div className="jumbo">
         <h1 className="display-4">
           Welcome to My Website!
         </h1>
