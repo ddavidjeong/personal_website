@@ -13,3 +13,10 @@
   opacity: 0;
   transition: opacity 300ms ease-out;
 }
+
+body {
+  background-color: #121212; /* Dark background */
+  color: #fff; /* White text color */
+  font-family: "Helvetica Neue", Helvetica, Arial,
+    sans-serif; /* Consistent font */
+}
